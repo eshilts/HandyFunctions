@@ -9,3 +9,13 @@ sn <- function(dat) {
 RemoveDupes <- function(dat) {
   dat[!duplicated(dat),]
 }
+
+# Top & bottom code a vector
+TopCode <- function(vec, level=100) {
+  ifelse(vec > level, level, vec)
+}
+
+BottomCode <- function(vec, level=0) {
+  ifelse(vec < level, level, vec)
+}
+
